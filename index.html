@@ -1,477 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AETHER | LUXURY MOBILE HYDRATION | & CONCIERGE WELLNESS</title>
-    <!-- Tailwind CSS CDN with custom config extension -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        slate: {
-                            900: '#0f172a',
-                            950: '#090d16',
-                        },
-                        teal: {
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            900: '#134e4a',
-                        },
-                        sand: '#f8f6f0',
-                        muted: '#94a3b8'
-                    },
-                    fontFamily: {
-                        serif: ['Cinzel', 'Playfair Display', 'Didot', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    },
-                    letterSpacing: {
-                        ultra: '0.25em',
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts for High-End Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>AETHER | Luxury Concierge IV Hydration Lakes Region NH</title>
+    <script src="https://jsdelivr.net"></script>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #090d16;
-            color: #f8f6f0;
-        }
-        .font-serif-title {
-            font-family: 'Cinzel', serif;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(45, 212, 191, 0.12);
-        }
-        .glass-card-hover {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-card-hover:hover {
-            border-color: rgba(45, 212, 191, 0.4);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(45, 212, 191, 0.08);
-        }
-        .teal-gradient-text {
-            background: linear-gradient(135deg, #ffffff 30%, #2dd4bf 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .teal-accent-glow {
-            box-shadow: 0 0 35px -5px rgba(45, 212, 191, 0.25);
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .serif-title { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-slate-950 text-sand antialiased selection:bg-teal-400 selection:text-slate-950">
+<body class="bg-stone-50 text-slate-950 selection:bg-teal-100 antialiased">
 
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-teal-500/10">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
-            <a href="#" class="flex flex-col">
-                <span class="font-serif-title text-2xl tracking-ultra font-semibold text-white">AETHER</span>
-                <span class="text-[9px] tracking-[0.3em] uppercase text-teal-400 font-medium -mt-1">LUXURY MOBILE HYDRATION & CONCIERGE WELLNESS</span>
-            </a>
-
-            <!-- Desktop Nav Menu -->
-            <nav class="hidden md:flex items-center space-x-12 text-xs tracking-ultra uppercase text-slate-300 font-medium">
-                <a href="#about" class="hover:text-teal-300 transition-colors">Philosophy</a>
-                <a href="#menu" class="hover:text-teal-300 transition-colors">Infusions</a>
-                <a href="#process" class="hover:text-teal-300 transition-colors">Experience</a>
-                <a href="#intake" class="hover:text-teal-300 transition-colors">Concierge</a>
-            </nav>
-
-            <a href="#intake" class="hidden sm:inline-flex items-center justify-center px-6 py-3 text-xs tracking-ultra uppercase font-semibold text-slate-950 bg-teal-300 hover:bg-teal-400 transition-all duration-300 rounded-none teal-accent-glow">
-                Request Concierge
-            </a>
-
-            <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-slate-300 focus:outline-none" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"/>
-                </svg>
-            </button>
+    <nav class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-200/60 gap-4">
+        <a href="https://lakesregioniv.com" class="flex flex-col items-start leading-none group tracking-wide">
+            <span class="text-3xl font-black uppercase text-slate-900 tracking-widest serif-title">AETHER</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.25em] text-teal-600 mt-2">Lakes Region NH</span>
+            <span class="text-[7px] font-semibold uppercase tracking-wider text-slate-400 mt-1">A Division of NH IV & Hydration Therapy, LLC</span>
+        </a>
+        <div class="flex items-center gap-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-white border border-slate-200 px-3 py-1.5 rounded-full shadow-xs">Registered State Medical Clinic</span>
         </div>
-
-        <!-- Mobile Drawer -->
-        <div id="mobile-drawer" class="hidden md:hidden bg-slate-950/98 border-b border-teal-500/20 px-8 py-8 space-y-6 text-center">
-            <a href="#about" class="mobile-link block text-xs tracking-ultra uppercase text-slate-300 hover:text-teal-300">Philosophy</a>
-            <a href="#menu" class="mobile-link block text-xs tracking-ultra uppercase text-slate-300 hover:text-teal-300">Infusions</a>
-            <a href="#process" class="mobile-link block text-xs tracking-ultra uppercase text-slate-300 hover:text-teal-300">Experience</a>
-            <a href="#intake" class="mobile-link block text-xs tracking-ultra uppercase text-slate-300 hover:text-teal-300">Concierge Intake</a>
-            <a href="#intake" class="mobile-link inline-block w-full py-3 text-xs tracking-ultra uppercase font-semibold text-slate-950 bg-teal-300">Request Concierge</a>
-        </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-32 pb-24 px-6 lg:px-12 overflow-hidden">
-        <!-- Ambient Background Light -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <section class="max-w-4xl mx-auto px-6 text-center py-20 md:py-32 space-y-8">
+        <h1 class="text-4xl md:text-6xl font-normal text-slate-900 tracking-tight leading-none serif-title">
+            Elevate Your Wellness. <br><span class="italic text-teal-700">Restored In-Room.</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
+            Premium mobile IV hydration and vitamin therapies delivered by elite Registered Nurses directly to your estate, luxury lakefront rental, or resort suite in the Lakes Region. Total privacy. Clinical excellence.
+        </p>
+        <div class="pt-4">
+            <a href="tel:6035550199" class="inline-block bg-slate-900 text-white hover:bg-teal-700 font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-none shadow-lg transition-all duration-300">
+                Book Concierge Session
+            </a>
+        </div>
+    </section>
 
-        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-teal-400/20 bg-teal-950/30 text-teal-300 text-[11px] tracking-ultra uppercase font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
-                Discreet In-Residence & Estate Medical Care
+    <!-- Menu Tiers -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+            <h2 class="text-xs font-bold text-teal-600 uppercase tracking-widest">Bespoke Menu</h2>
+            <p class="text-2xl font-normal serif-title text-slate-900">All-Inclusive Mobile Infusion Tiers</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <!-- Tier 1 -->
+            <div class="bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-800">The Hydro-Boost</h3>
+                        <span class="text-xl font-bold serif-title text-slate-900">$295</span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Pure, rapid fluid resuscitation designed to counteract intense sun exposure, boating dehydration, or physical mountain fatigue.</p>
+                </div>
+                <div class="text-xs font-bold text-teal-600 tracking-wider uppercase pt-6">1,000mL Balanced Fluids &bull; Electrolytes</div>
             </div>
 
-            <h1 class="font-serif-title text-4xl sm:text-6xl md:text-7xl font-light text-white tracking-tight leading-[1.15]">
-                Elevate Your Wellness.<br/>
-                <span class="teal-gradient-text font-normal italic">Restored In-Room.</span>
-            </h1>
+            <!-- Tier 2 -->
+            <div class="bg-white border-2 border-teal-600 p-8 flex flex-col justify-between shadow-md relative">
+                <span class="absolute top-0 right-8 -translate-y-1/2 bg-teal-600 text-white text-[9px] font-bold uppercase tracking-widest px-3 py-1">Most Requested</span>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-800">The Lake Winnipesaukee Wellness</h3>
+                        <span class="text-xl font-bold serif-title text-slate-900">$395</span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Our flagship mobile reset. Aggressively clears travel fatigue, cruise sickness, jet lag, and triggers rapid system hangover recovery.</p>
+                </div>
+                <div class="text-xs font-bold text-teal-600 tracking-wider uppercase pt-6">Activated B12 &bull; B-Complex &bull; High-Dose Vitamin C</div>
+            </div>
 
-            <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-light leading-relaxed">
-                Bespoke IV hydration and cellular therapy delivered directly to your luxury suite, private estate, or motor yacht across Lake Winnipesaukee and the Lakes Region.
+            <!-- Tier 3 -->
+            <div class="bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-800">The Pinnacle Peak Elixir</h3>
+                        <span class="text-xl font-bold serif-title text-slate-900">$495</span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">The ultimate luxury cell therapy. Combines comprehensive multivitamin nourishment with a high-dose antioxidant finish to support advanced cellular detox.</p>
+                </div>
+                <div class="text-xs font-bold text-teal-600 tracking-wider uppercase pt-6">Myers' Blend &bull; Magnesium &bull; Glutathione Push</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptom Upgrades -->
+    <section class="max-w-4xl mx-auto px-6 py-12 text-center bg-white border border-slate-200 my-16 p-8">
+        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Targeted Symptom Upgrades Available On-Site</h3>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-xs font-medium text-slate-700">
+            <div>⚡ <span class="font-bold text-slate-900">The Nausea Reliever (Zofran)</span> &bull; $25</div>
+            <div>💥 <span class="font-bold text-slate-900">The Headache Destroyer (Toradol)</span> &bull; $30</div>
+            <div>🌌 <span class="font-bold text-slate-900">The Master Antioxidant (Glutathione)</span> &bull; $45</div>
+        </div>
+    </section>
+
+    <!-- Footer Disclaimer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-16 mt-20 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center space-y-4">
+            <p class="text-sm font-semibold text-slate-200 serif-title tracking-wider">&copy; 2026 AETHER. All Rights Reserved.</p>
+            <p class="text-[10px] text-slate-500 max-w-3xl mx-auto leading-relaxed font-light">
+                Clinical services advertised under the brand name AETHER are owned, operated, and legally administered by <span class="text-slate-400 font-bold">NH IV & Hydration Therapy, LLC</span>. All mobile treatments are performed independently by licensed Registered Nurses operating under standardized medical standing orders supervised by our licensed Medical Director. Elective IV wellness therapies are intended for rehydration and nutritional maintenance and do not substitute for emergency medical evaluation.
             </p>
-
-            <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#intake" class="w-full sm:w-auto px-10 py-4 text-xs tracking-ultra uppercase font-semibold text-slate-950 bg-teal-300 hover:bg-teal-400 transition-all duration-300 teal-accent-glow">
-                    Schedule Appointment
-                </a>
-                <a href="#menu" class="w-full sm:w-auto px-10 py-4 text-xs tracking-ultra uppercase font-medium text-slate-300 border border-slate-700 hover:border-teal-400/50 hover:text-white transition-all duration-300">
-                    Explore Infusions
-                </a>
-            </div>
-
-            <!-- Trust Bar -->
-            <div class="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-slate-800/80 max-w-4xl mx-auto">
-                <div>
-                    <p class="text-xs text-slate-400 tracking-wider uppercase">Practitioners</p>
-                    <p class="text-sm text-sand font-medium mt-1">Licensed MDs, NPs, RNs</p>
-                </div>
-                <div>
-                    <p class="text-xs text-slate-400 tracking-wider uppercase">Service Area</p>
-                    <p class="text-sm text-sand font-medium mt-1">Winnipesaukee & Surrounds</p>
-                </div>
-                <div>
-                    <p class="text-xs text-slate-400 tracking-wider uppercase">Dispatch Time</p>
-                    <p class="text-sm text-sand font-medium mt-1">Under 60 Minutes</p>
-                </div>
-                <div>
-                    <p class="text-xs text-slate-400 tracking-wider uppercase">Discretion</p>
-                    <p class="text-sm text-sand font-medium mt-1">100% Confidential</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy / About Section -->
-    <section id="about" class="py-32 px-6 lg:px-12 border-t border-slate-900 bg-slate-950">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <span class="text-teal-400 text-xs tracking-ultra uppercase font-medium">The AETHER Standard</span>
-            <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-light">Uncompromised Medical Excellence in Absolute Comfort</h2>
-            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
-                Designed exclusively for discerning residents and guests of New Hampshire’s premiere lakefront retreats. Whether recovering from a twilight cruise on the water, optimizing performance for a day on the mountain, or seeking jet-lag restoration, our clinical staff brings hospital-grade micronutrient formulations directly to your sanctuary.
-            </p>
-        </div>
-    </section>
-
-    <!-- Tiered Service Menu -->
-    <section id="menu" class="py-32 px-6 lg:px-12 bg-slate-900/40 relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center space-y-4 mb-20">
-                <span class="text-teal-400 text-xs tracking-ultra uppercase font-medium">Private Infusion Menu</span>
-                <h2 class="font-serif-title text-3xl sm:text-5xl text-white font-light">Tiered Hydration Formulations</h2>
-                <p class="text-slate-400 text-sm max-w-xl mx-auto font-light">All treatments include full clinical assessment, vital monitoring, and sterile in-room administration by a registered nurse.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tier 1: Essential -->
-                <div class="glass-card glass-card-hover p-10 flex flex-col justify-between relative group">
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-baseline">
-                            <span class="text-xs tracking-ultra uppercase text-teal-400 font-semibold">Tier I</span>
-                            <span class="text-3xl font-serif-title text-white font-light">$295</span>
-                        </div>
-                        <h3 class="text-2xl font-serif-title text-white">The Hydro-Pure</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase font-medium">Essential Rehydration & Electrolyte Balance</p>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light pt-2">
-                            A classic 1,000ml balanced crystalloid electrolyte infusion designed to immediately restore baseline intracellular hydration, alleviate fatigue, and flush systemic toxins.
-                        </p>
-                        <hr class="border-slate-800 my-6"/>
-                        <ul class="space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                1,000ml Electrolyte Fluid Matrix
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Sodium Chloride / Lactated Ringer's
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Direct Oxygenation Support
-                            </li>
-                            <li class="flex items-center gap-3 text-slate-500">
-                                <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
-                                Focused Micronutrient Additives
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-10">
-                        <a href="#intake" class="block w-full py-3 text-center text-xs tracking-ultra uppercase font-semibold text-teal-300 border border-teal-500/30 hover:bg-teal-300 hover:text-slate-950 transition-all duration-300">
-                            Select Formulation
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tier 2: Premium / Featured -->
-                <div class="glass-card glass-card-hover p-10 flex flex-col justify-between relative border-teal-400/40 bg-slate-900/80 group">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-300 text-slate-950 text-[10px] tracking-ultra uppercase font-bold px-4 py-1">
-                        Most Requested
-                    </div>
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-baseline">
-                            <span class="text-xs tracking-ultra uppercase text-teal-400 font-semibold">Tier II</span>
-                            <span class="text-3xl font-serif-title text-white font-light">$395</span>
-                        </div>
-                        <h3 class="text-2xl font-serif-title text-white">The Estate Radiance</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase font-medium">Cellular Recovery & Anti-Inflammatory</p>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light pt-2">
-                            Our signature Myers'-inspired elixir infused with potent antioxidants, B-complex vitamins, and high-dose Vitamin C to rapidly eliminate brain fog and revitalize fatigued skin.
-                        </p>
-                        <hr class="border-slate-800 my-6"/>
-                        <ul class="space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Full Electrolyte Hydration Base
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                High-Dose Vitamin C & B-Complex
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Magnesium Chloride & Zinc
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Glutathione Push (Cellular Master Detox)
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-10">
-                        <a href="#intake" class="block w-full py-3 text-center text-xs tracking-ultra uppercase font-semibold text-slate-950 bg-teal-300 hover:bg-teal-400 transition-all duration-300 teal-accent-glow">
-                            Select Formulation
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Tier 3: Elite -->
-                <div class="glass-card glass-card-hover p-10 flex flex-col justify-between relative group">
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-baseline">
-                            <span class="text-xs tracking-ultra uppercase text-teal-400 font-semibold">Tier III</span>
-                            <span class="text-3xl font-serif-title text-white font-light">$495</span>
-                        </div>
-                        <h3 class="text-2xl font-serif-title text-white">The Sovereign Sovereign</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase font-medium">NAD+ Longevity & Complete Vitality Protocol</p>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light pt-2">
-                            The ultimate executive reset. Combines high-potency cellular NAD+ with targeted amino therapies, anti-nausea medication, and tailored intravenous boosters for peak cognitive clarity.
-                        </p>
-                        <hr class="border-slate-800 my-6"/>
-                        <ul class="space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Premium 1,000ml Infusion Matrix
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Cellular NAD+ Booster Therapy
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                Dual Target Additives (Toradol/Zofran as needed)
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                                CoQ10 & Amino Acid Blend Push
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-10">
-                        <a href="#intake" class="block w-full py-3 text-center text-xs tracking-ultra uppercase font-semibold text-teal-300 border border-teal-500/30 hover:bg-teal-300 hover:text-slate-950 transition-all duration-300">
-                            Select Formulation
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sleek 3-Step Timeline -->
-    <section id="process" class="py-32 px-6 lg:px-12 bg-slate-950 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center space-y-4 mb-24">
-                <span class="text-teal-400 text-xs tracking-ultra uppercase font-medium">White-Glove Process</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-light">How Concierge Service Works</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                <!-- Timeline Connecting Line for Desktop -->
-                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-teal-500/30 to-transparent -translate-y-12"></div>
-
-                <!-- Step 1 -->
-                <div class="relative text-center space-y-6">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-slate-900 border border-teal-400/40 flex items-center justify-center font-serif-title text-xl text-teal-300 relative z-10 shadow-lg shadow-teal-950/50">
-                        01
-                    </div>
-                    <h3 class="text-xl font-serif-title text-white">Discreet Intake</h3>
-                    <p class="text-slate-400 text-sm font-light leading-relaxed">
-                        Complete our encrypted 60-second medical intake. Select your preferred luxury location and desired time.
-                    </p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative text-center space-y-6">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-slate-900 border border-teal-400/40 flex items-center justify-center font-serif-title text-xl text-teal-300 relative z-10 shadow-lg shadow-teal-950/50">
-                        02
-                    </div>
-                    <h3 class="text-xl font-serif-title text-white">Clinical Dispatch</h3>
-                    <p class="text-slate-400 text-sm font-light leading-relaxed">
-                        A dedicated New Hampshire licensed Registered Nurse arrives at your suite, villa, or yacht with your custom infusion.
-                    </p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative text-center space-y-6">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-slate-900 border border-teal-400/40 flex items-center justify-center font-serif-title text-xl text-teal-300 relative z-10 shadow-lg shadow-teal-950/50">
-                        03
-                    </div>
-                    <h3 class="text-xl font-serif-title text-white">Restored Vitality</h3>
-                    <p class="text-slate-400 text-sm font-light leading-relaxed">
-                        Relax in total privacy as 100% bioavailable nutrients restore your energy, mental clarity, and optimal wellness.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Intake & Booking Form Section -->
-    <section id="intake" class="py-32 px-6 lg:px-12 bg-slate-900/30 relative">
-        <div class="max-w-3xl mx-auto glass-card p-8 sm:p-14 relative">
-            <div class="text-center space-y-4 mb-10">
-                <span class="text-teal-400 text-xs tracking-ultra uppercase font-medium">Private Dispatch</span>
-                <h2 class="font-serif-title text-3xl text-white font-light">Request Concierge Arrival</h2>
-                <p class="text-slate-400 text-xs tracking-wider font-light">
-                    Submit your details below. A medical coordinator will contact you instantly via private SMS or call to confirm.
-                </p>
-            </div>
-
-            <form id="concierge-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[11px] tracking-ultra uppercase text-slate-400 mb-2">Full Name</label>
-                        <input type="text" required class="w-full bg-slate-950 border border-slate-800 text-sand px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors" placeholder="e.g. Sterling Archer">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] tracking-ultra uppercase text-slate-400 mb-2">Private Phone</label>
-                        <input type="tel" required class="w-full bg-slate-950 border border-slate-800 text-sand px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors" placeholder="(603) 000-0000">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[11px] tracking-ultra uppercase text-slate-400 mb-2">Location / Lake Residence</label>
-                        <input type="text" required class="w-full bg-slate-950 border border-slate-800 text-sand px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors" placeholder="e.g. Wolfeboro Estate / Marina Slip">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] tracking-ultra uppercase text-slate-400 mb-2">Requested Therapy</label>
-                        <select class="w-full bg-slate-950 border border-slate-800 text-sand px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors">
-                            <option value="tier2">Tier II: The Estate Radiance ($395)</option>
-                            <option value="tier1">Tier I: The Hydro-Pure ($295)</option>
-                            <option value="tier3">Tier III: The Sovereign ($495)</option>
-                            <option value="custom">Custom Clinical Consultation</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-[11px] tracking-ultra uppercase text-slate-400 mb-2">Special Requests or Medical Notes</label>
-                    <textarea rows="3" class="w-full bg-slate-950 border border-slate-800 text-sand px-4 py-3 text-sm focus:outline-none focus:border-teal-400 transition-colors" placeholder="Specify any preferences, dietary notes, or gate codes..."></textarea>
-                </div>
-
-                <div class="pt-4">
-                    <button type="submit" class="w-full py-4 text-xs tracking-ultra uppercase font-semibold text-slate-950 bg-teal-300 hover:bg-teal-400 transition-all duration-300 teal-accent-glow">
-                        Dispatch Concierge Nurse
-                    </button>
-                </div>
-
-                <p class="text-[10px] text-slate-500 text-center tracking-wider uppercase pt-2">
-                    Strict HIPAA Compliance • 256-Bit Encrypted Communication
-                </p>
-            </form>
-
-            <div id="form-success" class="hidden text-center py-12 space-y-4">
-                <div class="w-12 h-12 rounded-full bg-teal-400/20 text-teal-300 mx-auto flex items-center justify-center text-xl">✓</div>
-                <h3 class="font-serif-title text-2xl text-white">Concierge Request Received</h3>
-                <p class="text-slate-300 text-sm font-light">Our clinical triage team is reviewing your details. Expect a private call within 5-10 minutes.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 px-6 lg:px-12 bg-slate-950 border-t border-slate-900 text-slate-500 text-xs">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex flex-col items-center md:items-start space-y-1">
-                <span class="font-serif-title text-lg tracking-ultra text-white">AETHER</span>
-                <span class="text-[10px] tracking-widest text-slate-400">LUXURY MOBILE HYDRATION & CONCIERGE WELLNESS</span>
-            </div>
-            
-            <p class="text-center md:text-right text-slate-500 text-[11px] max-w-md">
-                Servicing Meredith, Wolfeboro, Moultonborough, Gilford, and surrounding Lakes Region estates. All medical services administered under protocols by licensed physicians and registered nurses.
-            </p>
-        </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-900/60 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-600 gap-4">
-            <p>&copy; 2026 NH Mobile IV & Hydration Therapy, LLC. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-slate-400">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400">Terms of Service</a>
-                <a href="#" class="hover:text-slate-400">Clinical Governance</a>
-            </div>
         </div>
     </footer>
 
-    <!-- Responsive & Interactive Embedded Script -->
-    <script>
-        // Mobile Drawer Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const drawer = document.getElementById('mobile-drawer');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            drawer.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                drawer.classList.add('hidden');
-            });
-        });
-
-        // Form Submit Handler
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            document.getElementById('concierge-form').classList.add('hidden');
-            document.getElementById('form-success').classList.remove('hidden');
-        }
-
-        // Smooth Viewport Adjustment for Luxury Smartphones
-        function adjustViewport() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        window.addEventListener('resize', adjustViewport);
-        adjustViewport();
-    </script>
 </body>
 </html>
  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-12 border-t border-slate-800">
