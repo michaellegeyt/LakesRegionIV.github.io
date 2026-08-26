@@ -9,20 +9,22 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Custom Obsidian + Warm Copper Ivory Color Palette -->
+  <!-- Custom "Beacon Hill Lavender" Color Palette Definition -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            aether: {
-              dark: '#0B0E11',     /* Charcoal Obsidian base background */
-              card: '#14181F',     /* Dark Slate container background */
-              border: '#282420',   /* Subtle warm-edged dark border */
-              warm: '#E5C3A6',     /* Primary Warm Copper Ivory accent */
-              warmlight: '#F0D2B8',/* Soft warm hover state */
-              text: '#F7F4F0',     /* Crisp readable cream text */
-              muted: '#9E968D'     /* Muted platinum sand secondary text */
+            beacon: {
+              base: '#F7F5F1',        /* Base / Page Background: Porcelain */
+              surface: '#EEEAE4',     /* Surface / Card: Warm Alabaster */
+              secondary: '#B7ADBD',   /* Brand Secondary: Lavender Gray */
+              border: '#D3CCD1',      /* Border / Divider: Aged Lilac Stone */
+              text: '#302B34',        /* Primary Text: Inked Aubergine */
+              muted: '#5F5962',       /* Secondary Text: Slate Plum */
+              cta: '#655469',         /* Primary CTA: Deep Heather */
+              ctahover: '#493C4D',    /* CTA Hover: Black Plum */
+              brass: '#A68E62'        /* Restrained Accent: Soft Antique Brass */
             }
           }
         }
@@ -41,33 +43,32 @@
   </style>
 </head>
 
-<body class="bg-aether-dark text-aether-text selection:bg-aether-warm selection:text-aether-dark antialiased">
+<body class="bg-beacon-base text-beacon-text selection:bg-beacon-secondary selection:text-beacon-text antialiased">
 
     <!-- Navigation Header -->
-    <nav class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-aether-border gap-4">
+    <nav class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-beacon-border gap-4">
         <a href="https://lakesregioniv.com" class="flex flex-col items-start leading-none group tracking-wide">
-            <!-- Scaled up AETHER title to be the dominant element on the page -->
-            <span class="text-5xl md:text-7xl font-black uppercase text-aether-text tracking-widest serif-title">AETHER</span>
-            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-aether-warm mt-3">Lakes Region NH</span>
-            <span class="text-[8px] font-semibold uppercase tracking-wider text-aether-muted mt-1">A Division of NH IV & Hydration Therapy, LLC</span>
+            <!-- Main Brand Header -->
+            <span class="text-5xl md:text-7xl font-black uppercase text-beacon-text tracking-widest serif-title">AETHER</span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-beacon-brass mt-3">Lakes Region NH</span>
+            <span class="text-[8px] font-semibold uppercase tracking-wider text-beacon-muted mt-1">A Division of NH IV & Hydration Therapy, LLC</span>
         </a>
         <div class="flex items-center gap-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-aether-warm bg-aether-card border border-aether-border px-4 py-2 rounded-full shadow-sm">Registered Licensed Providers</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-beacon-text bg-beacon-surface border border-beacon-border px-4 py-2 rounded-full shadow-sm">Registered Licensed Providers</span>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="max-w-4xl mx-auto px-6 text-center py-16 md:py-24 space-y-6">
-        <!-- Scaled down Elevate text so it sits below AETHER in hierarchy -->
-        <h1 class="text-2xl md:text-4xl font-normal text-aether-text tracking-tight leading-snug serif-title">
-            Elevate Your Wellness. <br><span class="italic text-aether-warm">Restored In-Room.</span>
+        <h1 class="text-2xl md:text-4xl font-normal text-beacon-text tracking-tight leading-snug serif-title">
+            Elevate Your Wellness. <br><span class="italic text-beacon-cta">Restored In-Room.</span>
         </h1>
-        <p class="text-sm md:text-base text-aether-muted max-w-2xl mx-auto font-light leading-relaxed">
+        <p class="text-sm md:text-base text-beacon-muted max-w-2xl mx-auto font-light leading-relaxed">
             Premium mobile IV hydration and vitamin therapies delivered by elite Registered Nurses directly to your estate, luxury lakefront retreat, or resort suite in the Lakes Region. Total privacy. Clinical excellence.
         </p>
         <div class="pt-2">
-            <a href="tel:6035550199" class="inline-block bg-aether-warm text-aether-dark hover:bg-aether-warmlight font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-none shadow-lg transition-all duration-300">
-                Book Concierge Session
+            <a href="tel:6035550199" class="inline-block bg-beacon-cta text-beacon-base hover:bg-beacon-ctahover font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-none shadow-md transition-all duration-300">
+                Request a Private Appointment
             </a>
         </div>
     </section>
@@ -75,68 +76,68 @@
     <!-- Menu Tiers -->
     <section class="max-w-6xl mx-auto px-6 py-12">
         <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
-            <h2 class="text-xs font-bold text-aether-warm uppercase tracking-widest">Bespoke Menu</h2>
-            <p class="text-xl md:text-2xl font-normal serif-title text-aether-text">All-Inclusive Mobile Infusion Tiers</p>
+            <h2 class="text-xs font-bold text-beacon-brass uppercase tracking-widest">Bespoke Menu</h2>
+            <p class="text-xl md:text-2xl font-normal serif-title text-beacon-text">All-Inclusive Mobile Infusion Tiers</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             <!-- Tier 1 -->
-            <div class="bg-aether-card border border-aether-border p-8 flex flex-col justify-between shadow-sm hover:border-aether-warm transition-all relative">
-                <span class="absolute top-0 left-8 -translate-y-1/2 bg-aether-border text-aether-text text-[8px] font-bold uppercase tracking-widest px-3 py-1 border border-aether-border">Essential Hydration</span>
+            <div class="bg-beacon-surface border border-beacon-border p-8 flex flex-col justify-between shadow-sm hover:border-beacon-secondary transition-all relative">
+                <span class="absolute top-0 left-8 -translate-y-1/2 bg-beacon-base text-beacon-muted text-[8px] font-bold uppercase tracking-widest px-3 py-1 border border-beacon-border">Essential Hydration</span>
                 <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-aether-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-aether-text">The Squam Lake Hydration</h3>
-                        <span class="text-xl font-bold serif-title text-aether-warm">$295</span>
+                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Squam Lake Hydration</h3>
+                        <span class="text-xl font-bold serif-title text-beacon-cta">$295</span>
                     </div>
-                    <p class="text-xs text-aether-muted leading-relaxed font-light">Pure, rapid fluid resuscitation designed to counteract intense sun exposure, boating dehydration, or physical mountain fatigue.</p>
+                    <p class="text-xs text-beacon-muted leading-relaxed font-light">Pure, rapid fluid resuscitation designed to counteract intense sun exposure, boating dehydration, or physical mountain fatigue.</p>
                 </div>
-                <div class="text-xs font-bold text-aether-warm tracking-wider uppercase pt-6">1,000mL Balanced Fluids &bull; Electrolytes</div>
+                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">1,000mL Balanced Fluids &bull; Electrolytes</div>
             </div>
 
             <!-- Tier 2 -->
-            <div class="bg-aether-card border border-aether-border p-8 flex flex-col justify-between shadow-sm hover:border-aether-warm transition-all relative">
-                <span class="absolute top-0 right-8 -translate-y-1/2 bg-aether-border text-aether-text text-[8px] font-bold uppercase tracking-widest px-3 py-1 border border-aether-border">Signature Recovery</span>
+            <div class="bg-beacon-surface border border-beacon-border p-8 flex flex-col justify-between shadow-sm hover:border-beacon-secondary transition-all relative">
+                <span class="absolute top-0 right-8 -translate-y-1/2 bg-beacon-base text-beacon-muted text-[8px] font-bold uppercase tracking-widest px-3 py-1 border border-beacon-border">Signature Recovery</span>
                 <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-aether-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-aether-text">The Lake Winnipesaukee Wellness</h3>
-                        <span class="text-xl font-bold serif-title text-aether-warm">$395</span>
+                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Lake Winnipesaukee Wellness</h3>
+                        <span class="text-xl font-bold serif-title text-beacon-cta">$395</span>
                     </div>
-                    <p class="text-xs text-aether-muted leading-relaxed font-light">Our flagship mobile reset. Aggressively clears travel fatigue, cruise sickness, jet lag, and triggers rapid system hangover recovery.</p>
+                    <p class="text-xs text-beacon-muted leading-relaxed font-light">Our flagship mobile reset. Aggressively clears travel fatigue, cruise sickness, jet lag, and triggers rapid system hangover recovery.</p>
                 </div>
-                <div class="text-xs font-bold text-aether-warm tracking-wider uppercase pt-6">Activated B12 &bull; B-Complex &bull; High-Dose Vitamin C</div>
+                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">Activated B12 &bull; B-Complex &bull; High-Dose Vitamin C</div>
             </div>
 
             <!-- Tier 3 -->
-            <div class="bg-aether-card border-2 border-aether-warm p-8 flex flex-col justify-between shadow-md relative">
-                <span class="absolute top-0 right-8 -translate-y-1/2 bg-aether-warm text-aether-dark text-[8px] font-bold uppercase tracking-widest px-3 py-1 font-semibold">Our Premier Wellness Therapy</span>
+            <div class="bg-beacon-surface border-2 border-beacon-brass p-8 flex flex-col justify-between shadow-md relative">
+                <span class="absolute top-0 right-8 -translate-y-1/2 bg-beacon-brass text-beacon-base text-[8px] font-bold uppercase tracking-widest px-3 py-1">Our Premier Wellness Therapy</span>
                 <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-aether-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-aether-text">The Mount Washington Elixir</h3>
-                        <span class="text-xl font-bold serif-title text-aether-warm">$495</span>
+                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Mount Washington Elixir</h3>
+                        <span class="text-xl font-bold serif-title text-beacon-cta">$495</span>
                     </div>
-                    <p class="text-xs text-aether-muted leading-relaxed font-light">The ultimate luxury cell therapy. Combines comprehensive multivitamin nourishment with a high-dose antioxidant finish to support advanced cellular detox.</p>
+                    <p class="text-xs text-beacon-muted leading-relaxed font-light">The ultimate luxury cell therapy. Combines comprehensive multivitamin nourishment with a high-dose antioxidant finish to support advanced cellular detox.</p>
                 </div>
-                <div class="text-xs font-bold text-aether-warm tracking-wider uppercase pt-6">Myers' Blend &bull; Magnesium &bull; Glutathione Push</div>
+                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">Myers' Blend &bull; Magnesium &bull; Glutathione Push</div>
             </div>
         </div>
     </section>
 
     <!-- Symptom Upgrades -->
-    <section class="max-w-4xl mx-auto px-6 py-12 text-center bg-aether-card border border-aether-border my-16 p-8">
-        <h3 class="text-xs font-bold text-aether-warm uppercase tracking-widest mb-4">Targeted Symptom Upgrades Available On-Site</h3>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-xs font-medium text-aether-text">
-            <div>⚡ <span class="font-bold text-aether-warm">The Nausea Reliever (Zofran)</span> &bull; $25</div>
-            <div>💥 <span class="font-bold text-aether-warm">The Headache Destroyer (Toradol)</span> &bull; $30</div>
-            <div>🌌 <span class="font-bold text-aether-warm">The Master Antioxidant (Glutathione)</span> &bull; $45</div>
+    <section class="max-w-4xl mx-auto px-6 py-12 text-center bg-beacon-surface border border-beacon-border my-16 p-8">
+        <h3 class="text-xs font-bold text-beacon-brass uppercase tracking-widest mb-4">Targeted Symptom Upgrades Available On-Site</h3>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-xs font-medium text-beacon-text">
+            <div>⚡ <span class="font-bold text-beacon-cta">The Nausea Reliever (Zofran)</span> &bull; $25</div>
+            <div>💥 <span class="font-bold text-beacon-cta">The Headache Destroyer (Toradol)</span> &bull; $30</div>
+            <div>🌌 <span class="font-bold text-beacon-cta">The Master Antioxidant (Glutathione)</span> &bull; $45</div>
         </div>
     </section>
 
     <!-- Footer Disclaimer -->
-    <footer class="bg-aether-dark text-aether-muted text-xs py-16 mt-20 border-t border-aether-border">
+    <footer class="bg-beacon-base text-beacon-muted text-xs py-16 mt-20 border-t border-beacon-border">
         <div class="max-w-6xl mx-auto px-6 text-center space-y-4">
-            <p class="text-sm font-semibold text-aether-text serif-title tracking-wider">&copy; 2026 AETHER. All Rights Reserved. A Division of NH Mobile IV & Hydration Therapy, LLC.</p>
-            <p class="text-[10px] text-aether-muted max-w-3xl mx-auto leading-relaxed font-light">
-                Clinical services advertised under the brand name AETHER are owned, operated, and legally administered by <span class="text-aether-text font-bold">NH IV & Hydration Therapy, LLC</span>. All mobile treatments are performed independently by licensed Registered Nurses operating under standardized medical standing orders supervised by our licensed Medical Director. Elective IV wellness therapies are intended for rehydration and nutritional maintenance and do not substitute for emergency medical evaluation.
+            <p class="text-sm font-semibold text-beacon-text serif-title tracking-wider">&copy; 2026 AETHER. All Rights Reserved. A Division of NH Mobile IV & Hydration Therapy, LLC.</p>
+            <p class="text-[10px] text-beacon-muted max-w-3xl mx-auto leading-relaxed font-light">
+                Clinical services advertised under the brand name AETHER are owned, operated, and legally administered by <span class="text-beacon-text font-bold">NH IV & Hydration Therapy, LLC</span>. All mobile treatments are performed independently by licensed Registered Nurses operating under standardized medical standing orders supervised by our licensed Medical Director. Elective IV wellness therapies are intended for rehydration and nutritional maintenance and do not substitute for emergency medical evaluation.
             </p>
         </div>
     </footer>
