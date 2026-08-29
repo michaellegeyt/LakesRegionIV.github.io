@@ -19,35 +19,48 @@
   <!-- Tailwind CSS CDN: must load before the configuration block -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Beacon Hill Lavender palette -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            beacon: {
-              base: '#FAF7FC',
-              surface: '#F1EAF6',
-              secondary: '#C7B4D6',
-              border: '#CFC2D8',
-              borderstrong: '#B6A4C2',
-              text: '#342B3F',
-              muted: '#6E617C',
-              plum: '#563968',
-              plumhover: '#432B52',
-              plumsoft: '#E6DDEB',
-              plumborder: '#9A83A9'
-            }
-          },
-          boxShadow: {
-            soft: '0 8px 24px rgba(52, 43, 63, 0.08)',
-            tier: '0 12px 30px rgba(86, 57, 104, 0.12)',
-            'tier-hover': '0 18px 42px rgba(86, 57, 104, 0.18)'
+<!-- Beacon Hill Lavender + Lakeside Sage Tailwind Palette -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          beacon: {
+            /* Lavender family */
+            base: '#FAF7FC',          // Warm lavender-white: hero, menu background, footer
+            surface: '#F1EAF6',       // Soft lavender: menu-tier cards and inset panels
+            secondary: '#C7B4D6',     // Medium muted lavender: subtle highlights
+
+            /* Lakeside Sage family */
+            sagebase: '#E7EEE9',      // Main site background: soft gray-sage
+            sagehover: '#DCE7E0',     // Slightly deeper sage: section breaks / hover panels
+            sageborder: '#B8CABC',    // Sage border: structural page dividers
+
+            /* Lavender / plum borders */
+            border: '#CFC2D8',        // Standard soft lavender-gray borders
+            borderstrong: '#B6A4C2',  // Stronger lavender-gray borders
+            plumborder: '#9A83A9',    // Visible dusty-plum card outline
+
+            /* Text */
+            text: '#342B3F',          // Primary text: deep plum ink
+            muted: '#6E617C',         // Secondary text: muted plum-gray
+
+            /* Dark plum actions and emphasis */
+            plum: '#563968',          // High-contrast plum: buttons, prices, labels, key dividers
+            plumhover: '#432B52',     // Darker plum: hover state
+            plumsoft: '#E6DDEB'       // Soft plum: signature-tier card or subtle callout
           }
+        },
+
+        boxShadow: {
+          soft: '0 8px 24px rgba(52, 43, 63, 0.08)',
+          tier: '0 12px 30px rgba(86, 57, 104, 0.12)',
+          'tier-hover': '0 18px 42px rgba(86, 57, 104, 0.18)'
         }
       }
     }
-  </script>
+  }
+</script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +82,7 @@
   </style>
 </head>
 
-<body class="min-h-screen bg-beacon-base text-beacon-text antialiased selection:bg-beacon-secondary selection:text-beacon-text">
+<body class="min-h-screen bg-beacon-sagebase text-beacon-text antialiased selection:bg-beacon-secondary selection:text-beacon-text">
 
   <!-- Header -->
   <header class="border-b border-beacon-border">
@@ -103,7 +116,7 @@
   <main>
 
     <!-- Hero -->
-    <section class="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
+    <section class="mx-auto mt-8 max-w-4xl bg-beacon-base px-6 py-16 text-center shadow-soft md:py-24">
       <p class="mb-5 text-[10px] font-bold uppercase tracking-[0.2em] text-beacon-plum">
         Private, In-Residence Wellness
       </p>
@@ -132,7 +145,7 @@
     </section>
 
     <!-- Menu -->
-    <section id="bespoke-menu" class="border-y border-beacon-border bg-white/40 px-6 py-16 md:py-20">
+    <section id="bespoke-menu" class="border-y border-beacon-sageborder bg-beacon-base px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <div class="mx-auto mb-14 max-w-2xl text-center">
           <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-beacon-plum">
