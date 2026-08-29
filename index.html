@@ -3,172 +3,378 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Governors Island Wellness | Luxury IV Hydration & Concierge Wellness in the Lakes Region of New Hampshire</title>
-  <meta name="keywords" content="mobile iv lakes region nh, iv hydration lake winnipesaukee, hangover cure meredith nh, mobile nurse iv laconia, squam lake iv therapy, aether hydration, nh iv and hydration therapy llc">
-  
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Custom "Beacon Hill Lavender" Color Palette -->
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          beacon: {
-            base: '#FAF7FC',          // Base / page background: warm pale lavender-white
-            surface: '#F1EAF6',       // Surface / cards: soft lavender
-            secondary: '#C7B4D6',     // Brand secondary lavender: section fills and subtle highlights
+  <meta
+    name="description"
+    content="Premium mobile IV hydration and concierge wellness services delivered by Registered Nurses to estates, lakefront retreats, and resort suites throughout New Hampshire's Lakes Region."
+  >
 
-            border: '#CFC2D8',        // Dusty plum-gray: standard card borders and dividers
-            bordersoft: '#E4DBEA',    // Softer border: input fields and quiet dividers
-            borderstrong: '#B6A4C2',  // Stronger border: featured card or active state
+  <meta
+    name="keywords"
+    content="mobile iv lakes region nh, iv hydration lake winnipesaukee, mobile nurse iv laconia, squam lake iv therapy, iv hydration meredith nh, nh mobile iv and hydration therapy llc"
+  >
 
-            text: '#342B3F',          // Primary text: deep plum ink
-            muted: '#6E617C',         // Secondary text: muted plum-gray
-            faint: '#958A9F',         // Tertiary text: labels and supporting details only
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-            cta: '#7C5A96',           // Primary CTA: refined muted plum
-            ctahover: '#68497F',      // CTA hover: deeper plum
-            ctaactive: '#563968',     // CTA active state
+  <!-- Custom "Beacon Hill Lavender" Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            beacon: {
+              base: '#FAF7FC',
+              surface: '#F1EAF6',
+              secondary: '#C7B4D6',
 
-            plum: '#563968',          // Dark plum: high-contrast tier accent, rules, icons, and labels
-            plumhover: '#432B52',     // Darker plum: hover/active accent
-            plumsoft: '#E6DDEB',      // Pale plum fill: labels, feature tier background, subtle callouts
-            plumborder: '#9A83A9'     // Medium-dark plum: high-visibility menu-tier border
+              border: '#CFC2D8',
+              bordersoft: '#E4DBEA',
+              borderstrong: '#B6A4C2',
+
+              text: '#342B3F',
+              muted: '#6E617C',
+              faint: '#958A9F',
+
+              cta: '#7C5A96',
+              ctahover: '#68497F',
+              ctaactive: '#563968',
+
+              plum: '#563968',
+              plumhover: '#432B52',
+              plumsoft: '#E6DDEB',
+              plumborder: '#9A83A9'
+            }
+          },
+
+          boxShadow: {
+            tier: '0 10px 28px rgba(86, 57, 104, 0.12)',
+            'tier-hover': '0 16px 36px rgba(86, 57, 104, 0.18)',
+            soft: '0 6px 20px rgba(52, 43, 63, 0.08)'
           }
         }
       }
     }
-  }
-</script>
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Shared Brand Styling -->
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .serif-title { font-family: 'Playfair Display', serif; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .serif-title {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+
+  <!-- Reusable Menu-Tier Styling -->
+  <style type="text/tailwindcss">
+    @layer components {
+      .menu-tier {
+        @apply relative flex min-h-[27rem] w-full flex-col
+               border-2 border-beacon-plumborder
+               bg-beacon-surface
+               px-8 pb-8 pt-10
+               text-beacon-text
+               shadow-tier
+               transition duration-200 ease-out;
+      }
+
+      .menu-tier:hover {
+        @apply -translate-y-1 border-beacon-plum shadow-tier-hover;
+      }
+
+      .menu-tier--featured {
+        @apply border-[3px] border-beacon-plum bg-beacon-plumsoft shadow-tier-hover;
+      }
+
+      .menu-tier-label {
+        @apply absolute right-6 top-0 -translate-y-1/2
+               bg-beacon-plum px-4 py-2
+               text-[10px] font-bold uppercase tracking-[0.16em]
+               text-white shadow-sm;
+      }
+
+      .menu-tier-label--featured {
+        @apply bg-beacon-plumhover;
+      }
+
+      .menu-tier-header {
+        @apply flex items-start justify-between gap-4
+               border-b border-beacon-borderstrong pb-5;
+      }
+
+      .menu-tier-title {
+        @apply max-w-[13rem] text-sm font-bold uppercase
+               leading-relaxed tracking-[0.1em] text-beacon-text;
+      }
+
+      .menu-tier-price {
+        @apply shrink-0 text-2xl font-bold text-beacon-plum serif-title;
+      }
+
+      .menu-tier-copy {
+        @apply mt-6 text-sm leading-7 text-beacon-muted;
+      }
+
+      .menu-tier-includes {
+        @apply mt-auto border-t border-beacon-borderstrong pt-6
+               text-xs font-bold uppercase leading-relaxed
+               tracking-[0.09em] text-beacon-plum;
+      }
+
+      .contact-button {
+        @apply flex min-h-12 items-center justify-center gap-2
+               bg-beacon-plum px-4 py-3
+               text-xs font-bold uppercase tracking-widest text-white
+               shadow-sm transition duration-200;
+      }
+
+      .contact-button:hover {
+        @apply bg-beacon-plumhover shadow-soft;
+      }
+
+      .contact-button:focus-visible {
+        @apply outline-none ring-2 ring-beacon-plum ring-offset-2 ring-offset-beacon-base;
+      }
+    }
   </style>
 </head>
 
-<body class="bg-beacon-base text-beacon-text selection:bg-beacon-secondary selection:text-beacon-text antialiased">
+<body class="bg-beacon-base text-beacon-text antialiased selection:bg-beacon-secondary selection:text-beacon-text">
 
-    <!-- Navigation Header -->
-    <nav class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-beacon-border gap-4">
-        <a href="https://lakesregioniv.com" class="flex flex-col items-start leading-none group tracking-wide">
-            <!-- Main Brand Header (Sentence Case) -->
-            <span class="text-5xl md:text-7xl font-normal text-beacon-text tracking-wider serif-title">Governors Island Wellness</span>
-            <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-beacon-brass mt-3">Lakes Region New Hampshire</span>
-            <span class="text-[8px] font-semibold uppercase tracking-wider text-beacon-muted mt-1">A Division of NH Mobile IV & Hydration Therapy, LLC</span>
-        </a>
-        <div class="flex items-center gap-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-beacon-text bg-beacon-surface border border-beacon-border px-4 py-2 rounded-full shadow-sm">Licensed Registered Providers</span>
-        </div>
-    </nav>
+  <!-- Navigation Header -->
+  <nav
+    class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5
+           border-b border-beacon-border px-6 py-8 sm:flex-row sm:items-center"
+    aria-label="Primary navigation"
+  >
+    <a
+      href="https://lakesregioniv.com"
+      class="group flex flex-col items-start leading-none tracking-wide"
+    >
+      <span class="serif-title text-4xl font-normal tracking-wide text-beacon-text md:text-6xl">
+        Governors Island Wellness
+      </span>
 
- <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 text-center py-16 md:py-24 space-y-8">
-        <h1 class="text-2xl md:text-4xl font-normal text-beacon-text tracking-tight leading-snug serif-title">
-            Elevate Your Wellness Journey. <br><span class="italic text-beacon-cta">Restored In-Room.</span>
-        </h1>
-        <p class="text-sm md:text-base text-beacon-muted max-w-2xl mx-auto font-light leading-relaxed">
-            Premium mobile IV hydration and vitamin therapies delivered by elite Registered Nurses directly to your luxury estate, lakefront retreat, or resort suite in the Lakes Region.<br>Total privacy. Clinical excellence.
-        </p>
+      <span class="mt-4 text-[10px] font-bold uppercase tracking-[0.25em] text-beacon-plum">
+        Lakes Region New Hampshire
+      </span>
+
+      <span class="mt-1 text-[9px] font-semibold uppercase tracking-wider text-beacon-muted">
+        A Division of NH Mobile IV &amp; Hydration Therapy, LLC
+      </span>
+    </a>
+
+    <div class="border border-beacon-borderstrong bg-beacon-surface px-4 py-2 shadow-sm">
+      <span class="text-xs font-bold uppercase tracking-[0.12em] text-beacon-plum">
+        Licensed Registered Providers
+      </span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="mx-auto max-w-4xl space-y-8 px-6 py-16 text-center md:py-24">
+      <h1 class="serif-title text-3xl font-normal leading-snug tracking-tight text-beacon-text md:text-5xl">
+        Elevate Your Wellness Journey.
+        <br>
+        <span class="italic text-beacon-plum">Restored In-Room.</span>
+      </h1>
+
+      <p class="mx-auto max-w-2xl text-sm font-light leading-relaxed text-beacon-muted md:text-base">
+        Premium mobile IV hydration and vitamin therapies delivered by elite Registered Nurses
+        directly to your luxury estate, lakefront retreat, or resort suite in the Lakes Region.
+        <br>
+        Total privacy. Clinical excellence.
+      </p>
     </section>
 
     <!-- Menu Tiers -->
-    <section class="max-w-6xl mx-auto px-6 py-12">
-        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
-            <!-- Updated Bespoke Menu size to be larger than the subtitle below -->
-            <h2 class="text-2xl md:text-3xl font-bold text-beacon-brass uppercase tracking-widest">Bespoke Menu</h2>
-            <p class="text-lg md:text-xl font-normal serif-title text-beacon-text">All-Inclusive Mobile Infusion Tiers</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <!-- Tier 1 -->
-            <div class="bg-beacon-surface border-2 border-beacon-brass p-8 flex flex-col justify-between shadow-md relative">
-                <!-- Changed left-8 to right-8 for consistent alignment -->
-                <span class="absolute top-0 right-8 -translate-y-1/2 bg-beacon-brass text-beacon-base text-[8px] font-bold uppercase tracking-widest px-3 py-1">Essential Hydration</span>
-                <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Winnisquam Reset</h3>
-                        <span class="text-xl font-bold serif-title text-beacon-cta">$295</span>
-                    </div>
-                    <p class="text-xs text-beacon-muted leading-relaxed font-light">A simple, restorative IV designed to help replenish fluids and key electrolytes when you are feeling depleted, run-down, or recovering from travel, heat, exercise, or a busy week. A straightforward reset to help you feel hydrated and refreshed.</p>
-                </div>
-                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">1,000mL Balanced Fluids &bull; Electrolytes</div>
+    <section class="mx-auto max-w-6xl px-6 py-12" id="bespoke-menu">
+      <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+        <h2 class="text-2xl font-bold uppercase tracking-[0.17em] text-beacon-plum md:text-3xl">
+          Bespoke Menu
+        </h2>
+
+        <p class="serif-title text-xl font-normal text-beacon-text md:text-2xl">
+          All-Inclusive Mobile Infusion Tiers
+        </p>
+
+        <div class="mx-auto h-px w-16 bg-beacon-plum"></div>
+      </div>
+
+      <div class="grid grid-cols-1 items-stretch gap-8 md:grid-cols-3">
+
+        <!-- Tier 1 -->
+        <article class="menu-tier">
+          <span class="menu-tier-label">Essential Hydration</span>
+
+          <div>
+            <div class="menu-tier-header">
+              <h3 class="menu-tier-title">
+                The Winnisquam Recovery
+              </h3>
+
+              <span class="menu-tier-price">$295</span>
             </div>
 
-            <!-- Tier 2 -->
-            <div class="bg-beacon-surface border-2 border-beacon-brass p-8 flex flex-col justify-between shadow-md relative">
-                <span class="absolute top-0 right-8 -translate-y-1/2 bg-beacon-brass text-beacon-base text-[8px] font-bold uppercase tracking-widest px-3 py-1">Signature Recovery</span>
-                <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Squam Recovery</h3>
-                        <span class="text-xl font-bold serif-title text-beacon-cta">$395</span>
-                    </div>
-                    <p class="text-xs text-beacon-muted leading-relaxed font-light">A more complete wellness blend that pairs hydration with carefully selected vitamins and nutrients to support energy, immune health, recovery, and everyday performance. Ideal when you want more than hydration alone and are looking for a balanced whole-body boost.</p>
-                </div>
-                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">Activated B12 &bull; B-Complex &bull; High-Dose Vitamin C</div>
+            <p class="menu-tier-copy">
+              A simple, restorative IV designed to help replenish fluids and key electrolytes
+              when you are feeling depleted, run-down, or recovering from travel, heat,
+              exercise, or a busy week. A straightforward reset to help you feel hydrated
+              and refreshed.
+            </p>
+          </div>
+
+          <p class="menu-tier-includes">
+            1,000mL Balanced Fluids &bull; Electrolytes
+          </p>
+        </article>
+
+        <!-- Tier 2 -->
+        <article class="menu-tier menu-tier--featured">
+          <span class="menu-tier-label menu-tier-label--featured">
+            Signature Recovery
+          </span>
+
+          <div>
+            <div class="menu-tier-header">
+              <h3 class="menu-tier-title">
+                The Squam Lake Reset
+              </h3>
+
+              <span class="menu-tier-price">$395</span>
             </div>
 
-            <!-- Tier 3 -->
-            <div class="bg-beacon-surface border-2 border-beacon-brass p-8 flex flex-col justify-between shadow-md relative">
-                <span class="absolute top-0 right-8 -translate-y-1/2 bg-beacon-brass text-beacon-base text-[8px] font-bold uppercase tracking-widest px-3 py-1">Premium Restoration</span>
-                <div class="space-y-4 pt-2">
-                    <div class="flex justify-between items-baseline border-b border-beacon-border pb-4">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-beacon-text">The Winnipesaukee Rejuvination</h3>
-                        <span class="text-xl font-bold serif-title text-beacon-cta">$495</span>
-                    </div>
-                    <p class="text-xs text-beacon-muted leading-relaxed font-light">Our most comprehensive IV experience, created for clients seeking elevated hydration and broader wellness support. This tier combines advanced nutrient options with a personalized approach to help support recovery, energy, resilience, and feeling your best from the inside out.</p>
-                </div>
-                <div class="text-xs font-bold text-beacon-cta tracking-wider uppercase pt-6">Myers' Blend &bull; Magnesium &bull; Glutathione Push</div>
+            <p class="menu-tier-copy">
+              A more complete wellness blend that pairs hydration with carefully selected
+              vitamins and nutrients to support energy, immune health, recovery, and
+              everyday performance. Ideal when you want more than hydration alone and are
+              looking for a balanced whole-body boost.
+            </p>
+          </div>
+
+          <p class="menu-tier-includes">
+            Activated B12 &bull; B-Complex &bull; High-Dose Vitamin C
+          </p>
+        </article>
+
+        <!-- Tier 3 -->
+        <article class="menu-tier">
+          <span class="menu-tier-label">Premium Restoration</span>
+
+          <div>
+            <div class="menu-tier-header">
+              <h3 class="menu-tier-title">
+                The Winnipesaukee Rejuvenation
+              </h3>
+
+              <span class="menu-tier-price">$495</span>
             </div>
-        </div>
+
+            <p class="menu-tier-copy">
+              Our most comprehensive IV experience, created for clients seeking elevated
+              hydration and broader wellness support. This tier combines advanced nutrient
+              options with a personalized approach to help support recovery, energy,
+              resilience, and feeling your best from the inside out.
+            </p>
+          </div>
+
+          <p class="menu-tier-includes">
+            Myers&rsquo; Blend &bull; Magnesium &bull; Glutathione Push
+          </p>
+        </article>
+      </div>
     </section>
 
     <!-- Symptom Upgrades -->
-    <section class="max-w-4xl mx-auto px-6 py-12 text-center bg-beacon-surface border border-beacon-border my-16 p-8">
-        <h3 class="text-xs font-bold text-beacon-brass uppercase tracking-widest mb-4">Targeted Symptom Upgrades Available On-Site</h3>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-xs font-medium text-beacon-text">
-            <div>⚡ <span class="font-bold text-beacon-cta">The Nausea Reliever (Zofran)</span> &bull; $25</div>
-            <div>💥 <span class="font-bold text-beacon-cta">The Headache Destroyer (Toradol)</span> &bull; $30</div>
-            <div>🌌 <span class="font-bold text-beacon-cta">The Master Antioxidant (Glutathione)</span> &bull; $45</div>
+    <section
+      class="mx-auto my-16 max-w-4xl border-2 border-beacon-plumborder
+             bg-beacon-surface px-8 py-10 text-center shadow-soft"
+    >
+      <h3 class="mb-6 text-xs font-bold uppercase tracking-[0.16em] text-beacon-plum">
+        Targeted Symptom Upgrades Available On-Site
+      </h3>
+
+      <div class="flex flex-col items-center justify-center gap-5 text-sm font-medium text-beacon-text sm:flex-row sm:gap-8 md:gap-12">
+        <div>
+          <span class="font-bold text-beacon-plum">The Nausea Reliever (Zofran)</span>
+          <span class="text-beacon-muted">&bull; $25</span>
         </div>
+
+        <div>
+          <span class="font-bold text-beacon-plum">The Headache Destroyer (Toradol)</span>
+          <span class="text-beacon-muted">&bull; $30</span>
+        </div>
+
+        <div>
+          <span class="font-bold text-beacon-plum">The Master Antioxidant (Glutathione)</span>
+          <span class="text-beacon-muted">&bull; $45</span>
+        </div>
+      </div>
     </section>
 
-   <!-- Direct Contact Bar: Relocated Below Symptom Upgrades -->
-    <section class="max-w-xl mx-auto px-6 mb-20 text-center space-y-3">
-        <p class="text-base font-bold uppercase tracking-widest text-beacon-brass">Reserve Your Luxury Wellness Session</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <!-- Direct Call Link with 603-377-LAKE -->
-            <a href="tel:6033775253" class="flex items-center justify-center gap-2 bg-beacon-cta text-beacon-base hover:bg-beacon-ctahover font-bold text-xs uppercase tracking-widest py-3 px-4 transition-all shadow-sm">
-                <span>📞 Call 603-377-LAKE</span>
-            </a>
-            
-            <!-- Direct Text/SMS Link with 603-377-LAKE -->
-            <a href="sms:6033775253?body=Hello%20Aether%20Wellness,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20concierge%20IV%20session." class="flex items-center justify-center gap-2 bg-beacon-cta text-beacon-base hover:bg-beacon-ctahover font-bold text-xs uppercase tracking-widest py-3 px-4 transition-all shadow-sm">
-                <span>💬 Text Us</span>
-            </a>
-            
-            <!-- Direct Email Link -->
-            <a href="mailto:concierge@lakesregioniv.com?subject=Concierge%20IV%20Appointment%20Inquiry" class="flex items-center justify-center gap-2 bg-beacon-cta text-beacon-base hover:bg-beacon-ctahover font-bold text-xs uppercase tracking-widest py-3 px-4 transition-all shadow-sm">
-                <span>✉️ Email Us</span>
-            </a>
-        </div>
+    <!-- Direct Contact Bar -->
+    <section class="mx-auto mb-20 max-w-3xl px-6 text-center">
+      <p class="mb-5 text-base font-bold uppercase tracking-[0.12em] text-beacon-plum">
+        Reserve Your Luxury Wellness Session
+      </p>
+
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <a href="tel:6033775253" class="contact-button">
+          <span>Call 603-377-LAKE</span>
+        </a>
+
+        <a
+          href="sms:6033775253?body=Hello%20Governors%20Island%20Wellness,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20concierge%20IV%20session."
+          class="contact-button"
+        >
+          <span>Text Us</span>
+        </a>
+
+        <a
+          href="mailto:concierge@lakesregioniv.com?subject=Concierge%20IV%20Appointment%20Inquiry"
+          class="contact-button"
+        >
+          <span>Email Us</span>
+        </a>
+      </div>
     </section>
-  
-    <!-- Footer Disclaimer -->
-    <footer class="bg-beacon-base text-beacon-muted text-xs py-16 mt-20 border-t border-beacon-border">
-        <div class="max-w-6xl mx-auto px-6 text-center space-y-4">
-            <p class="text-sm font-semibold text-beacon-text serif-title tracking-wider">&copy; 2026 Governors Island Wellness All Rights Reserved. A Division of NH Mobile IV & Hydration Therapy, LLC.</p>
-            <p class="text-[10px] text-beacon-muted max-w-3xl mx-auto leading-relaxed font-light">
-                Clinical services advertised under the brand name Governors Island Wellness are owned, operated, and legally administered by <span class="text-beacon-text font-bold">NH Mobile IV & Hydration Therapy, LLC</span>. All mobile treatments are performed independently by licensed Registered Nurses operating under standardized medical standing orders supervised by our licensed Medical Director. Elective IV wellness therapies are intended for rehydration and nutritional maintenance and do not substitute for emergency medical evaluation.
-            </p>
-        </div>
-    </footer>
+  </main>
+
+  <!-- Footer Disclaimer -->
+  <footer class="mt-20 border-t border-beacon-border bg-beacon-base py-16 text-xs text-beacon-muted">
+    <div class="mx-auto max-w-6xl space-y-4 px-6 text-center">
+      <p class="serif-title text-sm font-semibold tracking-wide text-beacon-text">
+        &copy; 2026 Governors Island Wellness. All Rights Reserved.
+        A Division of NH Mobile IV &amp; Hydration Therapy, LLC.
+      </p>
+
+      <p class="mx-auto max-w-3xl text-[10px] font-light leading-relaxed text-beacon-muted">
+        Clinical services advertised under the brand name Governors Island Wellness are owned,
+        operated, and legally administered by
+        <span class="font-bold text-beacon-text">NH Mobile IV &amp; Hydration Therapy, LLC</span>.
+        All mobile treatments are performed independently by licensed Registered Nurses operating
+        under standardized medical standing orders supervised by our licensed Medical Director.
+        Elective IV wellness therapies are intended for rehydration and nutritional maintenance
+        and do not substitute for emergency medical evaluation.
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
