@@ -19,55 +19,55 @@
   <!-- Tailwind CSS CDN: must load before the configuration block -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Beacon Hill Lavender + Lakeside Sage Tailwind Palette -->
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          beacon: {
-            /* Lavender family */
-            base: '#FAF7FC',          // Warm lavender-white: hero, menu background, footer
-            surface: '#F1EAF6',       // Soft lavender: menu-tier cards and inset panels
-            secondary: '#C7B4D6',     // Medium muted lavender: subtle highlights
+  <!-- Beacon Hill Lavender + Lakeside Sage Tailwind Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            beacon: {
+              /* Lavender family */
+              base: '#FAF7FC',
+              surface: '#F1EAF6',
+              secondary: '#C7B4D6',
 
-            /* Lakeside Sage family */
-            sagebase: '#E7EEE9',      // Main site background: soft gray-sage
-            sagehover: '#DCE7E0',     // Slightly deeper sage: section breaks / hover panels
-            sageborder: '#B8CABC',    // Sage border: structural page dividers
+              /* Lakeside Sage family */
+              sagebase: '#E7EEE9',
+              sagehover: '#DCE7E0',
+              sageborder: '#B8CABC',
 
-            /* Lavender / plum borders */
-            border: '#CFC2D8',        // Standard soft lavender-gray borders
-            borderstrong: '#B6A4C2',  // Stronger lavender-gray borders
-            plumborder: '#9A83A9',    // Visible dusty-plum card outline
+              /* Lavender / plum borders */
+              border: '#CFC2D8',
+              borderstrong: '#B6A4C2',
+              plumborder: '#9A83A9',
 
-            /* Text */
-            text: '#342B3F',          // Primary text: deep plum ink
-            muted: '#6E617C',         // Secondary text: muted plum-gray
+              /* Text */
+              text: '#342B3F',
+              muted: '#6E617C',
 
-            /* Dark plum actions and emphasis */
-            plum: '#563968',          // High-contrast plum: buttons, prices, labels, key dividers
-            plumhover: '#432B52',     // Darker plum: hover state
-            plumsoft: '#E6DDEB'       // Soft plum: signature-tier card or subtle callout
+              /* Dark plum actions and emphasis */
+              plum: '#563968',
+              plumhover: '#432B52',
+              plumsoft: '#E6DDEB'
+            }
+          },
+
+          boxShadow: {
+            soft: '0 8px 24px rgba(52, 43, 63, 0.08)',
+            tier: '0 12px 30px rgba(86, 57, 104, 0.12)',
+            'tier-hover': '0 18px 42px rgba(86, 57, 104, 0.18)'
           }
-        },
-
-        boxShadow: {
-          soft: '0 8px 24px rgba(52, 43, 63, 0.08)',
-          tier: '0 12px 30px rgba(86, 57, 104, 0.12)',
-          'tier-hover': '0 18px 42px rgba(86, 57, 104, 0.18)'
         }
       }
     }
-  }
-</script>
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800&display=swap"
     rel="stylesheet"
   >
 
@@ -85,15 +85,23 @@
 <body class="min-h-screen bg-beacon-sagebase text-beacon-text antialiased selection:bg-beacon-secondary selection:text-beacon-text">
 
   <!-- Header -->
-  <header class="border-b border-beacon-border">
+  <header class="border-b border-beacon-border bg-beacon-sagebase">
     <nav
-      class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 px-6 py-8 sm:flex-row sm:items-center"
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 text-center"
       aria-label="Primary navigation"
     >
       <a
         href="https://lakesregioniv.com"
-        class="flex flex-col items-start leading-none tracking-wide"
+        class="flex flex-col items-center leading-none tracking-wide text-center"
+        aria-label="Governors Island Wellness home"
       >
+        <!-- Centered Governors Island Wellness Logo -->
+        <img
+          src="governors-island-wellness-logo.jpg"
+          alt="Governors Island Wellness — Private, In-Residence Wellness"
+          class="mb-5 h-auto w-44 max-w-full sm:w-52"
+        >
+
         <span class="serif-title text-4xl font-normal tracking-wide text-beacon-text md:text-6xl">
           Governors Island Wellness
         </span>
@@ -164,222 +172,220 @@
 
         <div class="grid grid-cols-1 gap-7 md:grid-cols-3">
 
-        <!-- Tier 1 -->
-<article class="flex min-h-[27rem] flex-col border border-beacon-plumborder bg-beacon-surface p-8 shadow-tier transition duration-200 hover:-translate-y-1 hover:border-beacon-plum hover:shadow-tier-hover">
-  <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
-    Essential Hydration
-  </p>
+          <!-- Tier 1 -->
+          <article class="flex min-h-[27rem] flex-col border border-beacon-plumborder bg-beacon-surface p-8 shadow-tier transition duration-200 hover:-translate-y-1 hover:border-beacon-plum hover:shadow-tier-hover">
+            <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
+              Essential Hydration
+            </p>
 
-  <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
-    <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
-      Winnisquam<br>Recovery
-    </h3>
+            <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
+              <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
+                Winnisquam<br>Recovery
+              </h3>
 
-    <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
-      $295
-    </span>
-  </div>
+              <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
+                $295
+              </span>
+            </div>
 
-  <p class="mt-6 text-sm leading-7 text-beacon-muted">
-    A focused mobile hydration visit for times you may be feeling depleted after travel,
-    time in the sun, activity, or a demanding week. Includes balanced fluids and
-    electrolyte support following your clinical review.
-  </p>
+            <p class="mt-6 text-sm leading-7 text-beacon-muted">
+              A focused mobile hydration visit for times you may be feeling depleted after travel,
+              time in the sun, activity, or a demanding week. Includes balanced fluids and
+              electrolyte support following your clinical review.
+            </p>
 
-  <div class="mt-auto border-t border-beacon-borderstrong pt-5">
-    <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
-      1,000 mL Balanced Fluids &bull; Electrolytes &bull; Private RN Visit
-    </p>
-  </div>
-</article>
+            <div class="mt-auto border-t border-beacon-borderstrong pt-5">
+              <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
+                1,000 mL Balanced Fluids &bull; Electrolytes &bull; Private RN Visit
+              </p>
+            </div>
+          </article>
 
-<!-- Tier 2 -->
-<article class="flex min-h-[27rem] flex-col border border-beacon-plumborder bg-beacon-surface p-8 shadow-tier transition duration-200 hover:-translate-y-1 hover:border-beacon-plum hover:shadow-tier-hover">
-  <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
-    Signature Hydration
-  </p>
+          <!-- Tier 2 -->
+          <article class="flex min-h-[27rem] flex-col border border-beacon-plumborder bg-beacon-surface p-8 shadow-tier transition duration-200 hover:-translate-y-1 hover:border-beacon-plum hover:shadow-tier-hover">
+            <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
+              Signature Hydration
+            </p>
 
-  <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
-    <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
-      Squam Lake<br>Reset
-    </h3>
+            <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
+              <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
+                Squam Lake<br>Reset
+              </h3>
 
-    <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
-      $395
-    </span>
-  </div>
+              <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
+                $395
+              </span>
+            </div>
 
-  <p class="mt-6 text-sm leading-7 text-beacon-muted">
-    A more complete mobile infusion visit combining hydration with selected vitamin support,
-    based on your health history, wellness goals, and clinical screening. A thoughtful choice
-    when you want support beyond hydration alone.
-  </p>
+            <p class="mt-6 text-sm leading-7 text-beacon-muted">
+              A more complete mobile infusion visit combining hydration with selected vitamin support,
+              based on your health history, wellness goals, and clinical screening. A thoughtful choice
+              when you want support beyond hydration alone.
+            </p>
 
-  <div class="mt-auto border-t border-beacon-borderstrong pt-5">
-    <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
-      Balanced Fluids &bull; Vita-Complex &bull; Amino Blend &bull; Private RN Visit
-    </p>
-  </div>
-</article>
+            <div class="mt-auto border-t border-beacon-borderstrong pt-5">
+              <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
+                Balanced Fluids &bull; Vita-Complex &bull; Amino Blend &bull; Private RN Visit
+              </p>
+            </div>
+          </article>
 
-<!-- Tier 3 / Most Requested -->
-<article class="relative flex min-h-[27rem] flex-col border-2 border-beacon-plum bg-beacon-plumsoft p-8 shadow-tier-hover transition duration-200 hover:-translate-y-1">
-  <span class="absolute right-6 top-0 -translate-y-1/2 bg-beacon-plum px-4 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-sm">
-    Most Requested
-  </span>
+          <!-- Tier 3 / Most Requested -->
+          <article class="relative flex min-h-[27rem] flex-col border-2 border-beacon-plum bg-beacon-plumsoft p-8 shadow-tier-hover transition duration-200 hover:-translate-y-1">
+            <span class="absolute right-6 top-0 -translate-y-1/2 bg-beacon-plum px-4 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-sm">
+              Most Requested
+            </span>
 
-  <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
-    Premier Restoration
-  </p>
+            <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-beacon-plum">
+              Premier Restoration
+            </p>
 
-  <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
-    <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
-      Winnipesaukee<br>Rejuvenation
-    </h3>
+            <div class="mt-5 flex items-start justify-between gap-4 border-b border-beacon-borderstrong pb-5">
+              <h3 class="serif-title text-2xl font-normal leading-tight text-beacon-text">
+                Winnipesaukee<br>Rejuvenation
+              </h3>
 
-    <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
-      $495
-    </span>
-  </div>
+              <span class="serif-title shrink-0 text-2xl font-semibold text-beacon-plum">
+                $495
+              </span>
+            </div>
 
-  <p class="mt-6 text-sm leading-7 text-beacon-muted">
-    Our most comprehensive concierge infusion visit, designed around superior hydration
-    and nutrient support after an appropriate clinical review. Ideal for clients seeking a
-    more complete in-home wellness experience.
-  </p>
+            <p class="mt-6 text-sm leading-7 text-beacon-muted">
+              Our most comprehensive concierge infusion visit, designed around superior hydration
+              and nutrient support after an appropriate clinical review. Ideal for clients seeking a
+              more complete in-home wellness experience.
+            </p>
 
-  <div class="mt-auto border-t border-beacon-borderstrong pt-5">
-    <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
-      Optimized Wellness Infusion Plan &bull; Ascorbic Acid &bull; Vita-Complex &bull;
-      Amino Blend &bull; Mineral Blend &bull; Private RN Visit
-    </p>
-  </div>
-</article>
+            <div class="mt-auto border-t border-beacon-borderstrong pt-5">
+              <p class="text-xs font-bold uppercase leading-relaxed tracking-[0.08em] text-beacon-plum">
+                Optimized Wellness Infusion Plan &bull; Ascorbic Acid &bull; Vita-Complex &bull;
+                Amino Blend &bull; Mineral Blend &bull; Private RN Visit
+              </p>
+            </div>
+          </article>
 
-</div>
-</div>
-</section>
+        </div>
+      </div>
+    </section>
 
-<!-- Concierge Value -->
-<section class="border-y border-beacon-sageborder bg-beacon-sagehover px-6 py-14 md:py-16">
-  <div class="mx-auto max-w-4xl text-center">
-    <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-beacon-plum">
-      The Governors Island Difference
-    </p>
-
-    <h2 class="serif-title mt-4 text-3xl font-normal text-beacon-text md:text-4xl">
-      Concierge care, where you are
-    </h2>
-
-    <p class="mx-auto mt-5 max-w-3xl text-sm leading-7 text-beacon-muted md:text-base">
-      Every Governors Island Wellness visit includes private mobile service throughout the
-      Lakes Region, an appropriate pre-treatment health review, one-on-one administration by
-      a licensed Registered Nurse, and time reserved exclusively for your appointment.
-      No waiting room, driving, or crowded wellness clinic.
-    </p>
-  </div>
-</section>
-
-<!-- Optional Enhancements -->
-<section class="mx-auto max-w-5xl px-6 py-16 md:py-20">
-  <div class="border-t border-beacon-borderstrong pt-8 text-center">
-
-    <p class="mb-5 text-[10px] font-bold uppercase tracking-[0.18em] text-beacon-plum">
-      Optional Enhancements
-    </p>
-
-    <h2 class="serif-title text-3xl font-normal text-beacon-text">
-      Available During Your Visit
-    </h2>
-
-    <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-beacon-muted">
-      Available when clinically appropriate and approved following a complimentary
-      health screening and clinical review.
-    </p>
-
-    <!-- Three centered option cards -->
-    <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-5 text-sm md:grid-cols-3">
-
-      <!-- Reboot -->
-      <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
-        <p class="serif-title text-2xl font-normal text-beacon-text">
-          Reboot
+    <!-- Concierge Value -->
+    <section class="border-y border-beacon-sageborder bg-beacon-sagehover px-6 py-14 md:py-16">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-beacon-plum">
+          The Governors Island Difference
         </p>
 
-        <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
+        <h2 class="serif-title mt-4 text-3xl font-normal text-beacon-text md:text-4xl">
+          Concierge care, where you are
+        </h2>
 
-        <div class="space-y-2 text-xs leading-5 text-beacon-muted">
-          <p>
-            For those recovering after a late night, celebration, or occasional
-            overindulgence, to get you back to your day.
-          </p>
-          <p>Ondansetron</p>
-          <p>Vita-Complex</p>
+        <p class="mx-auto mt-5 max-w-3xl text-sm leading-7 text-beacon-muted md:text-base">
+          Every Governors Island Wellness visit includes private mobile service throughout the
+          Lakes Region, an appropriate pre-treatment health review, one-on-one administration by
+          a licensed Registered Nurse, and time reserved exclusively for your appointment.
+          No waiting room, driving, or crowded wellness clinic.
+        </p>
+      </div>
+    </section>
+
+    <!-- Optional Enhancements -->
+    <section class="mx-auto max-w-5xl px-6 py-16 md:py-20">
+      <div class="border-t border-beacon-borderstrong pt-8 text-center">
+
+        <p class="mb-5 text-[10px] font-bold uppercase tracking-[0.18em] text-beacon-plum">
+          Optional Enhancements
+        </p>
+
+        <h2 class="serif-title text-3xl font-normal text-beacon-text">
+          Available During Your Visit
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-beacon-muted">
+          Available when clinically appropriate and approved following a complimentary
+          health screening and clinical review.
+        </p>
+
+        <!-- Three centered option cards -->
+        <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-5 text-sm md:grid-cols-3">
+
+          <!-- Reboot -->
+          <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
+            <p class="serif-title text-2xl font-normal text-beacon-text">
+              Reboot
+            </p>
+
+            <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
+
+            <div class="space-y-2 text-xs leading-5 text-beacon-muted">
+              <p>
+                For those recovering after a late night, celebration, or occasional
+                overindulgence, to get you back to your day.
+              </p>
+              <p>Ondansetron</p>
+              <p>Vita-Complex</p>
+            </div>
+
+            <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
+              $45
+            </p>
+          </article>
+
+          <!-- Refresh -->
+          <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
+            <p class="serif-title text-2xl font-normal text-beacon-text">
+              Refresh
+            </p>
+
+            <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
+
+            <div class="space-y-2 text-xs leading-5 text-beacon-muted">
+              <p>
+                Designed to support balance, sustained energy, and feeling prepared
+                for any occasion.
+              </p>
+              <p>Taurine</p>
+              <p>N-Acetyl-Cysteine</p>
+            </div>
+
+            <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
+              $65
+            </p>
+          </article>
+
+          <!-- Revitalize -->
+          <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
+            <p class="serif-title text-2xl font-normal text-beacon-text">
+              Revitalize
+            </p>
+
+            <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
+
+            <div class="space-y-2 text-xs leading-5 text-beacon-muted">
+              <p>
+                An elevated beauty-and-wellness boost for clients who want to feel radiant,
+                confident, and prepared for every moment that matters.
+              </p>
+              <p>Glutathione</p>
+              <p>Alpha Lipoic Acid</p>
+            </div>
+
+            <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
+              $85
+            </p>
+          </article>
+
         </div>
 
-        <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
-          $45
-        </p>
-      </article>
-
-      <!-- Refresh -->
-      <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
-        <p class="serif-title text-2xl font-normal text-beacon-text">
-          Refresh
+        <!-- Disclaimer -->
+        <p class="mx-auto mt-10 max-w-3xl text-[11px] leading-6 text-beacon-muted">
+          Clinical suitability, ingredient selection, medication availability, and treatment volume
+          vary by individual and are determined through health screening, clinical protocols, and
+          medical oversight. Services are elective wellness offerings and are not intended to
+          diagnose, treat, cure, or prevent disease. They do not replace emergency or primary care.
         </p>
 
-        <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
-
-        <div class="space-y-2 text-xs leading-5 text-beacon-muted">
-          <p>
-            Designed to support balance, sustained energy, and feeling prepared
-            for any occasion.
-          </p>
-          <p>Taurine</p>
-          <p>N-Acetyl-Cysteine</p>
-        </div>
-
-        <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
-          $65
-        </p>
-      </article>
-
-      <!-- Revitalize -->
-      <article class="flex min-h-[16rem] flex-col border border-beacon-border bg-beacon-surface px-6 py-6 text-center shadow-sm">
-        <p class="serif-title text-2xl font-normal text-beacon-text">
-          Revitalize
-        </p>
-
-        <div class="mx-auto my-4 h-px w-10 bg-beacon-plumborder"></div>
-
-        <div class="space-y-2 text-xs leading-5 text-beacon-muted">
-          <p>
-            An elevated beauty-and-wellness boost for clients who want to feel radiant,
-            confident, and prepared for every moment that matters.
-          </p>
-          <p>Glutathione</p>
-          <p>Alpha Lipoic Acid</p>
-        </div>
-
-        <p class="mt-auto pt-6 text-lg font-bold text-beacon-plum">
-          $85
-        </p>
-      </article>
-
-  </div>
-
-    </div>
-
-    <!-- Disclaimer: intentionally below all three cards -->
-    <p class="mx-auto mt-10 max-w-3xl text-[11px] leading-6 text-beacon-muted">
-      Clinical suitability, ingredient selection, medication availability, and treatment volume
-      vary by individual and are determined through health screening, clinical protocols, and
-      medical oversight. Services are elective wellness offerings and are not intended to
-      diagnose, treat, cure, or prevent disease. They do not replace emergency or primary care.
-    </p>
-
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- Contact -->
     <section id="contact" class="bg-beacon-plum px-6 py-16 text-center md:py-20">
@@ -421,6 +427,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
